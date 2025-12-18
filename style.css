@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.navbar{
+    height: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+/* .logo{
+    /* height: 500px;   
+} */
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.banner{
+    width: 120px;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+.banner h1{
+    font-size: 48px;
+}
+.banner p{
+    width: 400px;
+    margin: 15px 0;
+}
+.banner button{
+    width: 120px;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+.section{
+    padding: 20px 40px;
+}
+.section h2{
+    margin-bottom: 10px;
+}
+.movies{
+    display: flex;
+    gap: 15px;
+    overflow: auto;
+}
