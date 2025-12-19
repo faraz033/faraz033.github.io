@@ -34,15 +34,3 @@ nav{
     color: aliceblue;
     cursor: pointer;
 }
-@media(min-width:768px){
-    .menu{
-        display: flex;
-        flex-direction: row;
-        position: static;
-        background: none;
-        width: auto;
-    }
-    .hamburger{
-        display: none;
-    }
-}
