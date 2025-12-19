@@ -177,7 +177,7 @@ body {
 }
 
 /* Mobile styles */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar {
     padding: 0 20px;
   }
@@ -213,7 +213,7 @@ body {
 }
 
 /* Tablet styles */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .navbar {
     padding: 0 30px;
   }
