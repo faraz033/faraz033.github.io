@@ -1,221 +1,105 @@
 import React from 'react';
 
-export default function Footer({ setCurrentPage }) {
-  const handleBackToTop = () => {
+function Footer() {
+  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="footer-container" aria-label="Footer Navigation">
-      {/* Back to top banner */}
-      <div className="back-to-top-btn" onClick={handleBackToTop}>
+    <footer className="mt-8 bg-[#232f3e] text-white">
+      {/* Back to top */}
+      <div 
+        className="bg-[#37475a] hover:bg-[#485769] text-center py-4 cursor-pointer text-sm font-medium"
+        onClick={scrollToTop}
+      >
         Back to top
       </div>
 
-      {/* Main links list */}
-      <div className="footer-links container">
-        <div className="footer-col">
-          <h3>Get to Know Us</h3>
-          <ul>
-            <li>Careers</li>
-            <li>Blog</li>
-            <li>About Amazon</li>
-            <li>Investor Relations</li>
-            <li>Amazon Devices</li>
-            <li>Amazon Science</li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h3>Make Money with Us</h3>
-          <ul>
-            <li>Sell products on Amazon</li>
-            <li>Sell on Amazon Business</li>
-            <li>Sell apps on Amazon</li>
-            <li>Become an Affiliate</li>
-            <li>Advertise Your Products</li>
-            <li>Self-Publish with Us</li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h3>Amazon Payment Products</h3>
-          <ul>
-            <li>Amazon Rewards Visa Card</li>
-            <li>Amazon.com Store Card</li>
-            <li>Amazon Secured Card</li>
-            <li>Amazon Business Card</li>
-            <li>Shop with Points</li>
-            <li>Credit Card Marketplace</li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h3>Let Us Help You</h3>
-          <ul>
-            <li>Amazon and COVID-19</li>
-            <li>Your Account</li>
-            <li>Your Orders</li>
-            <li>Shipping Rates & Policies</li>
-            <li>Amazon Prime</li>
-            <li>Returns & Replacements</li>
-            <li>Help</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="footer-divider" />
-
-      {/* Bottom Bar branding and copyright */}
-      <div className="footer-bottom container">
-        <div className="footer-logo-row">
-          <div className="footer-logo" onClick={() => { setCurrentPage('home'); handleBackToTop(); }}>
-            <span className="logo-text">amazon</span>
-            <span className="logo-dot">.prime</span>
-          </div>
-          
-          <div className="footer-lang-selector">
-            <span>🌐 English</span>
-            <span>USD - U.S. Dollar</span>
-            <span>🇺🇸 United States</span>
-          </div>
-        </div>
-
-        <div className="footer-copyright-row">
-          <p>© 1996-2026, Amazon.com, Inc. or its affiliates. Simulated Amazon Clone.</p>
-          <p className="college-credits">🎓 Submission for College Web Development Project. All Rights Reserved.</p>
-        </div>
-      </div>
-
-      <style>{`
-        .footer-container {
-          background-color: #232f3e;
-          color: #ddd;
-          width: 100%;
-          text-align: left;
-          font-size: 13px;
-        }
-
-        .back-to-top-btn {
-          background-color: #37475a;
-          color: white;
-          text-align: center;
-          padding: 15px 0;
-          cursor: pointer;
-          font-weight: 500;
-          transition: background-color var(--transition-fast);
-        }
-        .back-to-top-btn:hover {
-          background-color: #485769;
-        }
-
-        .footer-links {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 30px;
-          padding: 40px 20px;
-        }
-        .footer-col h3 {
-          color: white;
-          font-size: 15px;
-          font-weight: 700;
-          margin-bottom: 12px;
-        }
-        .footer-col ul {
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-        .footer-col ul li {
-          cursor: pointer;
-          color: #ccc;
-          transition: color var(--transition-fast);
-        }
-        .footer-col ul li:hover {
-          color: white;
-          text-decoration: underline;
-        }
-
-        .footer-divider {
-          height: 1px;
-          background-color: #3a4553;
-          width: 100%;
-        }
-
-        .footer-bottom {
-          padding: 30px 20px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 20px;
-        }
+      {/* Main Footer Links */}
+      <div className="flex flex-col md:flex-row justify-center py-10 px-4 md:space-x-24 space-y-8 md:space-y-0 text-sm">
         
-        .footer-logo-row {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 30px;
-          flex-wrap: wrap;
-        }
-        .footer-logo {
-          cursor: pointer;
-          display: flex;
-          align-items: baseline;
-        }
-        .footer-logo .logo-text {
-          font-family: 'Outfit', sans-serif;
-          font-weight: 700;
-          font-size: 20px;
-          color: white;
-          letter-spacing: -1px;
-        }
-        .footer-logo .logo-dot {
-          font-size: 11px;
-          color: var(--amazon-orange);
-          font-weight: 600;
-          margin-left: 1px;
-        }
+        <div className="flex flex-col space-y-2">
+          <h3 className="font-bold text-base mb-2">Get to Know Us</h3>
+          <p className="hover:underline cursor-pointer text-gray-300">About Us</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Careers</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Press Releases</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Amazon Science</p>
+        </div>
 
-        .footer-lang-selector {
-          display: flex;
-          gap: 12px;
-          color: #ccc;
-        }
-        .footer-lang-selector span {
-          border: 1px solid #555;
-          padding: 6px 12px;
-          border-radius: 3px;
-          cursor: pointer;
-          font-size: 12px;
-        }
-        .footer-lang-selector span:hover {
-          border-color: #ccc;
-          color: white;
-        }
+        <div className="flex flex-col space-y-2">
+          <h3 className="font-bold text-base mb-2">Connect with Us</h3>
+          <p className="hover:underline cursor-pointer text-gray-300">Facebook</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Twitter</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Instagram</p>
+        </div>
 
-        .footer-copyright-row {
-          text-align: center;
-          color: #aaa;
-          font-size: 11px;
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-        }
-        .college-credits {
-          color: var(--amazon-orange-light);
-          font-weight: 500;
-        }
+        <div className="flex flex-col space-y-2">
+          <h3 className="font-bold text-base mb-2">Make Money with Us</h3>
+          <p className="hover:underline cursor-pointer text-gray-300">Sell on Amazon</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Sell under Amazon Accelerator</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Protect and Build Your Brand</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Amazon Global Selling</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Become an Affiliate</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Fulfilment by Amazon</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Advertise Your Products</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Amazon Pay on Merchants</p>
+        </div>
 
-        @media (max-width: 768px) {
-          .footer-links {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-          }
-        }
-        @media (max-width: 480px) {
-          .footer-links {
-            grid-template-columns: 1fr;
-          }
-        }
-      `}</style>
+        <div className="flex flex-col space-y-2">
+          <h3 className="font-bold text-base mb-2">Let Us Help You</h3>
+          <p className="hover:underline cursor-pointer text-gray-300">COVID-19 and Amazon</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Your Account</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Returns Centre</p>
+          <p className="hover:underline cursor-pointer text-gray-300">100% Purchase Protection</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Amazon App Download</p>
+          <p className="hover:underline cursor-pointer text-gray-300">Help</p>
+        </div>
+
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="bg-[#131921] py-8 border-t border-gray-700 flex flex-col items-center text-xs text-gray-300">
+        
+        {/* Logo area */}
+        <div className="flex items-center space-x-2 mb-6 cursor-pointer">
+           <img 
+              className="w-20 object-contain invert"
+              src="/static/img/amazon_logo.svg" 
+              alt="Amazon Logo" 
+            />
+        </div>
+
+        {/* Fix: replaced max-w-[800px] with max-w-200 */}
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 max-w-200 mb-8 text-center px-4">
+          <span className="hover:underline cursor-pointer">Australia</span>
+          <span className="hover:underline cursor-pointer">Brazil</span>
+          <span className="hover:underline cursor-pointer">Canada</span>
+          <span className="hover:underline cursor-pointer">China</span>
+          <span className="hover:underline cursor-pointer">France</span>
+          <span className="hover:underline cursor-pointer">Germany</span>
+          <span className="hover:underline cursor-pointer">Italy</span>
+          <span className="hover:underline cursor-pointer">Japan</span>
+          <span className="hover:underline cursor-pointer">Mexico</span>
+          <span className="hover:underline cursor-pointer">Netherlands</span>
+          <span className="hover:underline cursor-pointer">Poland</span>
+          <span className="hover:underline cursor-pointer">Singapore</span>
+          <span className="hover:underline cursor-pointer">Spain</span>
+          <span className="hover:underline cursor-pointer">Turkey</span>
+          <span className="hover:underline cursor-pointer">United Arab Emirates</span>
+          <span className="hover:underline cursor-pointer">United Kingdom</span>
+          <span className="hover:underline cursor-pointer">United States</span>
+        </div>
+
+        {/* Legal */}
+        <div className="flex items-center space-x-6 mb-2">
+          <span className="hover:underline cursor-pointer">Conditions of Use & Sale</span>
+          <span className="hover:underline cursor-pointer">Privacy Notice</span>
+          <span className="hover:underline cursor-pointer">Interest-Based Ads</span>
+        </div>
+        <p>© 1996-2026, Amazon.com, Inc. or its affiliates</p>
+      </div>
     </footer>
   );
 }
+
+export default Footer;
