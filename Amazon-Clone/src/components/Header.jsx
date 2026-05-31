@@ -13,7 +13,6 @@ function Header() {
             src="/static/img/amazon_logo.svg" 
             alt="Amazon Logo" 
           />
-          {/* Fix: replaced mt-[-10px] with -mt-2.5 */}
           <span className="text-[#00a8e1] font-bold text-lg leading-3 ml-0.5 -mt-2.5">prime</span>
         </div>
 
