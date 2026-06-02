@@ -64,12 +64,11 @@ function Footer() {
         <div className="flex items-center space-x-2 mb-6 cursor-pointer">
            <img 
               className="w-20 object-contain invert"
-              src="/static/img/amazon_logo.svg" 
+              src="public\Static\img\amazon_logo.svg" 
               alt="Amazon Logo" 
             />
         </div>
 
-        {/* Fix: replaced max-w-[800px] with max-w-200 */}
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 max-w-200 mb-8 text-center px-4">
           <span className="hover:underline cursor-pointer">Australia</span>
           <span className="hover:underline cursor-pointer">Brazil</span>

@@ -6,7 +6,6 @@ function ProductCard({ id, title, image, price, mrp, discount, rating, reviewCou
 
   return (
     <div className="flex flex-col bg-white z-10 p-3 sm:p-5 m-1 sm:m-2.5 w-full max-w-sm rounded-sm hover:shadow-lg transition-shadow duration-300">
-      {/* Fix: h-[200px]→h-50, max-h-[200px]→max-h-50 */}
       <div className="h-50 w-full flex items-center justify-center mb-4 cursor-pointer">
         <img src={image} alt={title} className="max-h-50 max-w-full object-contain" />
       </div>
@@ -52,7 +51,7 @@ function ProductCard({ id, title, image, price, mrp, discount, rating, reviewCou
       <div className="flex flex-col mb-4">
         <div className="flex items-center text-xs text-gray-800 mb-0.5">
           <img 
-            src="/static/img/amazon_logo.svg" 
+            src="public\Static\img\amazon_logo.svg" 
             alt="Prime" 
             className="h-3 object-contain mr-1 filter brightness-0 opacity-80" 
           />
