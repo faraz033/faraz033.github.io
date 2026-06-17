@@ -11,7 +11,7 @@ function Header() {
           <img 
             className="w-20 object-contain invert"
             src="public\Static\img\amazon_logo.svg" 
-            alt="Amazon Logo" 
+            alt="amazon Logo" 
           />
           <span className="text-[#00a8e1] font-bold text-lg leading-3 ml-0.5 -mt-2.5">prime</span>
         </div>
