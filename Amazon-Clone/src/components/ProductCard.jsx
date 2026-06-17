@@ -51,7 +51,7 @@ function ProductCard({ id, title, image, price, mrp, discount, rating, reviewCou
       <div className="flex flex-col mb-4">
         <div className="flex items-center text-xs text-gray-800 mb-0.5">
           <img 
-            src="public\Static\img\amazon_logo.svg" 
+            src="\Static\img\amazon_logo.svg" 
             alt="Prime" 
             className="h-3 object-contain mr-1 filter brightness-0 opacity-80" 
           />
