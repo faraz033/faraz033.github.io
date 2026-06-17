@@ -36,7 +36,7 @@ function Home() {
       <div className="w-full relative">
         <img
           className="w-full lg:h-150 h-75 object-cover md:object-top -z-1 -mb-12.5 sm:-mb-37.5 mask-[linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))]"
-          src="\public\Static\img\banner.jpg"
+          src="\Static\img\banner.jpg"
           alt="banner"
         />
 
