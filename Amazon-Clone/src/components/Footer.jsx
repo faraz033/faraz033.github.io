@@ -64,7 +64,7 @@ function Footer() {
         <div className="flex items-center space-x-2 mb-6 cursor-pointer">
            <img 
               className="w-20 object-contain invert"
-              src="public\Static\img\amazon_logo.svg" 
+              src="\Static\img\amazon_logo.svg" 
               alt="Amazon Logo" 
             />
         </div>
